@@ -1,0 +1,56 @@
+{
+  "name": "express-create-react-app-custom-template",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Express app that serves create-react-app as a custom template",
+  "keywords": [
+    "express",
+    "create-react-app",
+    "react"
+  ],
+  "author": "Brett Jankord",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjankord/express-create-react-app-custom-template.git"
+  },
+  "homepage": "/",
+  "scripts": {
+    "start": "npm-run-all -p build:watch server:watch",
+    "server": "node ./bin/www",
+    "server:watch": "nodemon --ignore './build/' --ignore './src/' ./bin/www",
+    "build": "react-scripts build",
+    "build:watch": "cra-build-watch",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "cra-build-watch": "^3.2.0",
+    "express": "~4.16.1",
+    "express-es6-template-engine": "^2.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "chokidar": "^3.4.2",
+    "npm-run-all": "^4.1.5",
+    "socket.io": "^2.3.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
