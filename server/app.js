@@ -1,5 +1,6 @@
 const express = require('express');
 const es6Renderer = require('express-es6-template-engine');
+const serialize = require('serialize-javascript');
 const path = require('path');
 
 const packageJson = require('../package.json');
@@ -35,7 +36,8 @@ app.get('*', (req, res) => {
     locals: {
       header: '<header class="express-header">Custom Header from Express</header>',
       footer: '<footer class="express-footer">Custom Footer from Express</footer>',
-      bootstrap: JSON.stringify({ bootstrap: 'data' }),
+      // More info on using serialize: https://medium.com/node-security/the-most-common-xss-vulnerability-in-react-js-applications-2bdffbcc1fa0
+      bootstrap: serialize({ bootstrap: 'data' }, { isJSON: true }),
     },
   });
 });

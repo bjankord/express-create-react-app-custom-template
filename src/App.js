@@ -21,6 +21,7 @@ function App() {
           Learn React
         </a>
         <PingApi />
+        <p>This data is from the server and provided via window.bootstrap: {JSON.stringify(window.bootstrap)}</p>
       </header>
     </div>
   );
