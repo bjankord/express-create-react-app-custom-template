@@ -1,11 +1,12 @@
 const express = require('express');
+const http = require('http');
+const path = require('path');
+const reload = require('reload');
 const es6Renderer = require('express-es6-template-engine');
 const serialize = require('serialize-javascript');
-const path = require('path');
 
 const packageJson = require('../package.json');
 const router = require('./api');
-const reload = require('./reload');
 
 const app = express();
 
@@ -14,11 +15,6 @@ app.use(express.urlencoded({ extended: false }));
 
 // Api Routes
 app.use(`${packageJson.homepage}api`, router);
-
-// Serve reload.js file that enables live-reload functionality in dev mode
-if (process.env.NODE_ENV !== 'production') {
-  app.use(`${packageJson.homepage}reload`, reload);
-}
 
 // view engine setup
 app.engine('html', es6Renderer);
@@ -29,6 +25,13 @@ app.set('view engine', 'html');
 app.use(packageJson.homepage, express.static(path.join(__dirname, '..', 'build'), {
   index: false
 }));
+
+const server = http.createServer(app);
+server.listen(3000, () => console.log('App is running on localhost:3000'));
+// Wire up reload behavior if app is not running in production mode
+if (process.env.NODE_ENV !== 'production') {
+  reload(app);
+}
 
 // For all requests besides /api, server the index template based on create-react-app's public/index.html file
 app.get('*', (req, res) => {
@@ -41,5 +44,3 @@ app.get('*', (req, res) => {
     },
   });
 });
-
-module.exports = app;

@@ -2,7 +2,7 @@
   "name": "express-create-react-app-custom-template",
   "version": "0.0.0",
   "private": true,
-  "description": "Express app that serves create-react-app as a custom template",
+  "description": "Express app injects server rendered data into create-react-app index.html",
   "keywords": [
     "express",
     "create-react-app",
@@ -17,8 +17,8 @@
   "homepage": "/",
   "scripts": {
     "start": "npm-run-all -p build:watch server:watch",
-    "server": "node ./bin/www",
-    "server:watch": "nodemon --ignore './build/' --ignore './src/' ./bin/www",
+    "server": "node server/app.js",
+    "server:watch": "nodemon --ignore './src/' server/app.js",
     "build": "react-scripts build",
     "build:watch": "cra-build-watch",
     "test": "react-scripts test",
@@ -28,7 +28,6 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "chokidar": "^3.4.2",
     "cra-build-watch": "^3.2.0",
     "express": "~4.16.1",
     "express-es6-template-engine": "^2.2.0",
@@ -36,8 +35,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "serialize-javascript": "^5.0.1",
-    "socket.io": "^2.3.0"
+    "reload": "^3.1.0",
+    "serialize-javascript": "^5.0.1"
   },
   "eslintConfig": {
     "extends": "react-app"

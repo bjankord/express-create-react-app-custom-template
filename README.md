@@ -6,14 +6,14 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Builds create-react-app with watch/development mdoe (writes files to disk) for Express to serve.<br />
-Starts Express server that serves `build` on [http://localhost:3000](http://localhost:3000).
+Builds create-react-app with watch/development mode (writes files to disk) for Express to serve.<br />
+Starts Express server that serves `build` folder on [http://localhost:3000](http://localhost:3000).
 
 The page will reload if you make edits.
 
 ### `yarn server`
 
-Starts Express server in production mode that serves `build` on [http://localhost:3000](http://localhost:3000). Be sure to run `yarn build` to build the create-react-app in production mode before running `yarn server`.
+Starts Express server in production mode that serves `build` folder on [http://localhost:3000](http://localhost:3000). Be sure to run `yarn build` to build the create-react-app in production mode before running `yarn server`.
 
 ### `yarn test`
 
