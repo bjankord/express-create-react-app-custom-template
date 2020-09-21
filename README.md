@@ -1,5 +1,7 @@
 # Express Create React App Custom Template
 
+Example repo to show how to inject server rendered HTML into a create-react-app based app.
+
 ## Available Scripts
 
 In the project directory, you can run:
