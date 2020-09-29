@@ -3205,10 +3205,10 @@ commander@~2.19.0:
   resolved "https://registry.npmjs.org/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
   integrity sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
 
-commander@~5.1.0:
-  version "5.1.0"
-  resolved "https://registry.npmjs.org/commander/-/commander-5.1.0.tgz#46abbd1652f8e059bddaef99bbdcb2ad9cf179ae"
-  integrity sha512-P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==
+commander@~6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-6.1.0.tgz#f8d722b78103141006b66f4c7ba1e97315ba75bc"
+  integrity sha512-wl7PNrYWd2y5mp1OK/LhTlv8Ff4kQJQRXXAvF+uU/TPNiVJUxZLRYGj/B0y/lPGAVcSbJqH2Za/cvHmrPMC8mA==
 
 common-tags@^1.8.0:
   version "1.8.0"
@@ -9394,13 +9394,13 @@ relateurl@0.2.x, relateurl@^0.2.7:
   resolved "https://registry.npmjs.org/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
 
-reload@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/reload/-/reload-3.1.0.tgz#c366d0955558a33a5d834da3ea46ae908fec130c"
-  integrity sha512-hoBbG4CcVrySg/de7nesHt9Lw0ryJkvg0YfNHnJuO4YtosENX6F5iFc2KgEqErrcDfAZbtWQ7wrJ8eqyUUUxpw==
+reload@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/reload/-/reload-3.1.1.tgz#75c89626be6d5c458f0ead4493ed7c1464accde3"
+  integrity sha512-JblFn8P8CUfKqpclWNGs6rhda4hmywTq/a8DyjmwoGZ7Lp2krZ3swXgU3guvZ0waI3rorXFVS6z6UkKLYulmMA==
   dependencies:
     cli-color "~2.0.0"
-    commander "~5.1.0"
+    commander "~6.1.0"
     finalhandler "~1.1.1"
     minimist "~1.2.0"
     open "^7.0.0"
