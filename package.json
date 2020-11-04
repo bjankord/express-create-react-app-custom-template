@@ -16,27 +16,36 @@
   },
   "homepage": "/",
   "scripts": {
-    "start": "npm-run-all -p build:watch server:watch",
+    "start": "concurrently \"npm run build:watch\" \"npm run server:watch\"",
+    "start:test": "npm run build && npm run server",
     "server": "node server/app.js",
     "server:watch": "nodemon --ignore './src/' server/app.js",
     "build": "react-scripts build",
     "build:watch": "cra-build-watch",
     "test": "react-scripts test",
+    "cypress:run": "concurrently --kill-others --success first \"npm run start:test\" \"wait-port localhost:3000 && cypress run --browser chrome\"",
+    "cypress:open": "cypress open",
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "5.11.5",
-    "@testing-library/react": "11.1.1",
-    "@testing-library/user-event": "12.1.10",
-    "cra-build-watch": "3.4.0",
     "express": "4.17.1",
     "express-es6-template-engine": "2.2.3",
-    "npm-run-all": "4.1.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-scripts": "4.0.0",
     "reload": "3.1.1",
     "serialize-javascript": "5.0.1",
+    "web-vitals": "0.2.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "5.11.5",
+    "@testing-library/react": "11.1.1",
+    "@testing-library/user-event": "12.1.10",
+    "concurrently": "^5.3.0",
+    "cra-build-watch": "3.4.0",
+    "cross-env": "^7.0.2",
+    "cypress": "^5.5.0",
+    "wait-port": "^0.2.9",
     "web-vitals": "0.2.4"
   },
   "eslintConfig": {
