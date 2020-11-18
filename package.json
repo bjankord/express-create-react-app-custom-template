@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.11.6",
-    "@testing-library/react": "11.1.2",
+    "@testing-library/react": "11.2.0",
     "@testing-library/user-event": "12.2.2",
     "concurrently": "5.3.0",
     "cra-build-watch": "3.4.0",
