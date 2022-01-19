@@ -44,7 +44,7 @@
     "concurrently": "7.0.0",
     "cra-build-watch": "3.4.0",
     "cross-env": "7.0.3",
-    "cypress": "9.2.1",
+    "cypress": "9.3.1",
     "wait-port": "0.2.9",
     "web-vitals": "2.1.3"
   },
