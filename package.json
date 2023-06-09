@@ -35,7 +35,7 @@
     "react-scripts": "4.0.3",
     "reload": "3.2.1",
     "serialize-javascript": "6.0.1",
-    "web-vitals": "2.1.4"
+    "web-vitals": "3.3.2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.5",
@@ -46,7 +46,7 @@
     "cross-env": "7.0.3",
     "cypress": "9.7.0",
     "wait-port": "1.0.4",
-    "web-vitals": "2.1.4"
+    "web-vitals": "3.3.2"
   },
   "eslintConfig": {
     "extends": [
